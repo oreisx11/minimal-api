@@ -7,7 +7,7 @@ using MinimalApi.DTOs;
 
 namespace MINIMAL_API.Dominio.Interfaces
 {
-    public interface iVeiculosServico
+    public interface iVeiculoServico
     {
         List<Veiculo> Todos(int pagina = 1, string? nome = null, string? marca = null);
 

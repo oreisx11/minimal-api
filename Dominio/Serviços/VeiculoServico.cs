@@ -1,17 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Data.Common;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+
 using MINIMAL_API.Dominio.Entidades;
 using MINIMAL_API.Dominio.Interfaces;
-using MinimalApi.DTOs;
 using MinimalApi.Infraestrutura.DB;
 
 namespace MINIMAL_API.Dominio.Servicos;
 
-public class veiculoServico(DbContexto contexto) : iVeiculosServico
+public class VeiculoServico(DbContexto contexto) : iVeiculoServico
 {
     private readonly DbContexto _contexto = contexto;
 
@@ -19,7 +14,7 @@ public class veiculoServico(DbContexto contexto) : iVeiculosServico
     {
         _contexto.Veiculos.Remove(veiculo);
         _contexto.SaveChanges();
-    }
+    }  
 
     public void Atualizar(Veiculo veiculo)
     {

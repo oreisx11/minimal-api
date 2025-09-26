@@ -16,10 +16,12 @@ namespace MINIMAL_API.Dominio.Entidades
         [Required]
         [StringLength(150)]
         public string Nome { get; set; } = default!;
-        
+
+        [Required]
         [StringLength(100)]
         public string Marca { get; set; } = default!;
-     
+
+        [Required]
         public int Ano { get; set; } = default!;
     }
 
